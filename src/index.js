@@ -5,6 +5,7 @@ import "./styles/index.css";
 import Home from "./pages/Home.jsx";
 import TestChose from "./pages/A-Propos";
 import Header from "./components/Header/index";
+import Footer from "./components/Footer/index";
 import Error from "./components/Error/index";
 import Datas from "./datas/datas.json";
 
@@ -17,6 +18,7 @@ root.render(
       <Route path="/A-Propos" element={<TestChose />} />
       <Route path="*" element={<Error />} />
     </Routes>
+    <Footer />
   </BrowserRouter>
 );
 
