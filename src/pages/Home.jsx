@@ -1,5 +1,10 @@
+import BannerHome from "../components/Banner/HomePage";
+import "../styles/Home.scss"
 function Home() {
-  return <h1>Bonjour !</h1>;
+  return ( <div className="Home_div">
+    <BannerHome/>
+    </div>
+  )
 }
 
 export default Home;
