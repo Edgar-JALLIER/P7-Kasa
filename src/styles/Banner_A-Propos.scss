@@ -1,0 +1,57 @@
+.Position_div {
+    display: flex;
+    justify-content: center;
+    margin: 43px 20px;
+    position: relative;
+}
+
+.BannerApropos_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 223px;
+    max-width: 1240px;
+    border-radius: 25px;
+}  
+
+.BannerApropos_div_img {
+        background: url("../assets/BannerApropos.jpg");
+        background-size: cover;
+        height: 223px;
+        width: 100%;
+        max-width: 1240px;
+        border-radius: 25px;
+        position: absolute;
+        z-index: 1;
+    }
+.BannerApropos_div_dark {
+        
+        height: 223px;
+        width: 100%;
+        max-width: 1240px;
+        position: absolute;
+        background: black;  
+        mix-blend-mode: darken;
+        opacity: 0.3;
+        border-radius: 25px;
+        z-index: 2;
+}
+    
+
+
+@media screen and (max-width: 600px){
+    .Position_div {
+        margin: 20px 20px;
+    }
+        
+    .BannerApropos_div_img {
+        background: url("../assets/BannerApropos-mobile.jpg");
+        border-radius: 10px;
+        background-size: cover;
+    }
+
+    .BannerApropos_div_dark {
+        border-radius: 10px;
+        background: #F7F7F7;
+    }
+}

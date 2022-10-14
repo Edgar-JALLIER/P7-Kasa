@@ -1,4 +1,4 @@
-import BannerHome from "../components/Banner/HomePage";
+import BannerHome from "../components/Banner/Banner_HomePage";
 import Card from "../components/Card/index"
 import "../styles/Home.scss"
 

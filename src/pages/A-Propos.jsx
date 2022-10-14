@@ -1,8 +1,8 @@
-
+import BannerApropos from "../components/Banner/Banner_A-Propos";
 
 function TestChose() {
     return (<div>
-        <h1>Début des tests</h1>
+        <BannerApropos />
     </div>)
 }
 
