@@ -1,3 +1,19 @@
 .Home_div {
     margin: 0 20px;
 }
+
+.Card_div {
+    background-color: #F6F6F6;
+    border-radius: 25px;
+    max-width: 1240px;
+    margin: 40px auto;
+    padding: 45px 0;
+}
+
+@media screen and (max-width: 795px){
+    .Card_div {
+        background-color: white;
+        margin: 20px auto;
+        padding: 0;
+    }
+}
