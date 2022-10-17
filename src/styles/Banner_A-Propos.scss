@@ -1,7 +1,7 @@
-.Position_div {
+.BannerApropos_position {
     display: flex;
     justify-content: center;
-    margin: 43px 20px;
+    margin: 33px 20px;
     position: relative;
 }
 
@@ -40,7 +40,7 @@
 
 
 @media screen and (max-width: 600px){
-    .Position_div {
+    .BannerApropos_position {
         margin: 20px 20px;
     }
         

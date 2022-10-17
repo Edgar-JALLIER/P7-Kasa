@@ -22,7 +22,7 @@
         & li {   
             font-size: 24px;
             list-style-type: none;
-            padding: 20px 0 20px 40px;
+            padding: 20px 0 20px 50px;
         }
         & a {
             color:#FF6060;
@@ -33,7 +33,7 @@
         }
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 600px){
     .Header_div{
         margin: 20px 0 0 0;
     }
@@ -45,7 +45,7 @@
             & li {   
                 font-size: 12px;
                 text-transform: uppercase;
-                padding: 20px 0 20px 20px;
+                padding: 20px 0 20px 15px;
             }
         }
 }
