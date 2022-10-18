@@ -7,8 +7,8 @@ function Apropos() {
     return (<div>
         <BannerApropos />
         <div className="Dropdown_position"> 
-            {accordionData.map (({title, content}) => ( 
-            <DropdownApropos title ={title} content={content} />
+            {accordionData.map (({title, content, id}) => ( 
+            <DropdownApropos title ={title} content={content} key={id} />
             ))}
         </div>
     </div>)
