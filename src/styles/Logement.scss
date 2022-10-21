@@ -1,11 +1,16 @@
 .Page_logement {
     margin: 0px 20px;
+    &_informations {
+        max-width: 1240px;
+        margin: 0 auto;
+    }
 }
 
 .Informations-Logement {
     display: flex;
     justify-content: space-between;
     margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 .Title-Location-Tags {
@@ -71,6 +76,22 @@
     }
 }
 
+.Dropdown_logement {
+    display: flex;
+    column-gap: 76px;
+    & .Dropdown_button {
+        font-size: 18px;
+        border-radius: 10px;
+        height: 52px;
+    }
+    & .Dropdown_open p {
+        font-size: 18px;
+    }
+    & li {
+        list-style-type: none;
+    }
+}
+
 @media screen and (max-width: 800px){
     .Informations-Logement {
         justify-content: normal;
@@ -92,12 +113,17 @@
             padding-right: 10px;
         }
     }
+
+    .Dropdown_logement {
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 600px){
 
     .Informations-Logement {
         margin-top: 15px;
+        margin-bottom: 16px;
     }
 
     .Title-Location-Tags {
@@ -141,6 +167,18 @@
             width: 15px;
             padding-right: 5px;
             padding-left: 0;
+        }
+    }
+
+    .Dropdown_logement {
+        & .Dropdown_button {
+            font-size: 13px;
+            border-radius: 5px;
+            height: 30px;
+        }
+        & .Dropdown_open p {
+            font-size: 12px;
+            font-weight: 400;
         }
     }
 }

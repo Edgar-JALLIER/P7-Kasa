@@ -1,9 +1,11 @@
 .Dropdown_position {
-    margin: 0 20px 70px 20px;
+    margin: 0 20px 60px 20px;
 }
 
 .Dropdown_open {
+    width: 100%;
     margin: 0px auto;
+    margin-bottom: 30px;
     max-width: 1023px;
     background-color:#F7F7F7;
     border-radius: 5px;
@@ -23,7 +25,9 @@
 
 .Dropdown_closed {
     margin: 0px auto;
+    width: 100%;
     max-width: 1023px;
+    margin-bottom: 30px;
 }
 
 .Dropdown_button {
@@ -38,25 +42,27 @@
     color: white;
     border: none;
     border-radius: 5px;
-    margin: 30px 0 -5px 0;
+    margin: 0px 0 -5px 0;
     padding: 0 3.4% 0 15px;
 }
 
 @media screen and (max-width: 600px){
    .Dropdown_button {
-    margin-top: 20px;
     font-size: 13px;
     height: 30px;
     padding-left: 11px;
    }
 
-   .Dropdown_closed img {
-    height: 9px;
-    width: 15.2px;
-   }
-
+   .Dropdown_closed {
+    margin-bottom: 20px;
+    & img {
+        height: 9px;
+        width: 15.2px;
+    }
+}
    .Dropdown_open {
-   img {
+    margin-bottom: 20px;
+    & img {
     height: 9px;
     width: 15.2px;
    }

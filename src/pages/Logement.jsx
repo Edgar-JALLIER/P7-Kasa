@@ -4,6 +4,7 @@ import Carrousel from "../components/Carrousel/index.jsx";
 import {appartementList} from "../datas/datas"
 import {useParams} from "react-router-dom"
 import Rating from "../components/Rating/index"
+import DropdownApropos from "../components/Dropdown/A-Propos_Dropdown";
 
 function Logement() {
 
@@ -14,11 +15,14 @@ function Logement() {
 
     return <section className="Page_logement">
       <Carrousel />
+      <div className="Page_logement_informations">
+      {/*  Titre Logement */}
       <div className="Informations-Logement">
       <div className="Title-Location-Tags">
       <h1>{indexLogement.title}</h1>
       <h3>{indexLogement.location}</h3>
 
+       {/*  Tags */}
       <div className="Div_Tags">
       {indexLogement.tags.map ((tag, index) => {
       return (
@@ -29,12 +33,14 @@ function Logement() {
       </div>
       </div>
 
+       {/*  Host */}
       <div className="Host-Rating">
         <div className="Host">
           <p>{indexLogement.host.name}</p>
           <img src={indexLogement.host.picture} alt="Propriétaire" />
         </div>
-        
+
+         {/*  Rating */}
         {indexLogements.map(({index, rating}) => {
           return (
             <div key={index+id} className="Rating">
@@ -43,7 +49,18 @@ function Logement() {
                )})}      
           </div>      
         </div>
-        
+
+         {/*  Description + Equipements */}
+        <div className="Dropdown_logement">
+          <DropdownApropos className="Dropdown_logement_description" title="Description" content={indexLogement.description}/>
+          <DropdownApropos className="Dropdown_logement_equipement"title="Équipements" content={indexLogement.equipments.map ((equipment, index) => {
+      return (
+        <li className="Dropdown_logement_equipement_li" key={index+id}>
+          {equipment}
+        </li>
+      )})} />
+      </div>
+      </div>
     </section>
   }
   
