@@ -3,7 +3,7 @@ import { useState } from "react";
 import fleche from "../../assets/Fleche-Dropdown.png"
 
 
-function DropdownApropos ({title, content, id}) {
+function DropdownApropos ({title, content}) {
     const [isOpen , setIsOpen] = useState(false);
     return isOpen ? (
         <div className="Dropdown_open">

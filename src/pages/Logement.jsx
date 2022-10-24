@@ -1,28 +1,33 @@
 import "../styles/Carrousel.scss"
 import "../styles/Logement.scss"
 import Carrousel from "../components/Carrousel/index.jsx";
+import { Navigate } from "react-router-dom";
 import {appartementList} from "../datas/datas"
-import {useParams} from "react-router-dom"
+import { useParams } from "react-router-dom"
 import Rating from "../components/Rating/index"
 import DropdownApropos from "../components/Dropdown/A-Propos_Dropdown";
 
 function Logement() {
-
   const params = useParams()
-  const id = params.id
+  const id = params.id 
   const indexLogement = appartementList.find(element => element.id === id)
   const indexLogements = appartementList.filter(element => element.id === id)
-
-    return <section className="Page_logement">
+ 
+  //Condition pour vérifier si l'id est correct
+   if (indexLogements.length === 0) {
+    return <Navigate to="/notfound" replace={true} />
+    }
+      
+      return <section className="Page_logement">
       <Carrousel />
       <div className="Page_logement_informations">
-      {/*  Titre Logement */}
+      {/* Titre Logement */}
       <div className="Informations-Logement">
       <div className="Title-Location-Tags">
       <h1>{indexLogement.title}</h1>
       <h3>{indexLogement.location}</h3>
 
-       {/*  Tags */}
+       {/* Tags */}
       <div className="Div_Tags">
       {indexLogement.tags.map ((tag, index) => {
       return (
@@ -63,6 +68,6 @@ function Logement() {
       </div>
     </section>
   }
-  
+
   export default Logement;
   
