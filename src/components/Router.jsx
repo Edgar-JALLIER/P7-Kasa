@@ -12,7 +12,6 @@ function Router () {
     <Header />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/Logement/*" element={<Error />} />
       <Route path="/Logement/:id" element={<Logement />} />
       <Route path="/A-Propos" element={<Apropos />} />
       <Route path="*" element={<Error />} />
