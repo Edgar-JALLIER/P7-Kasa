@@ -13,10 +13,13 @@ function Carrousel() {
   const [imageActuelle, changerimage] = useState(0)
   const nombreImage = slides.length
 
+
+  //Logique pour retourner à la 1ère photo lorsque l'on est à la dernière image et que l'on appuis sur suivant
   const imageSuivante = () => {
     changerimage (imageActuelle === nombreImage - 1 ? 0 : imageActuelle + 1)
   }
-
+  
+ // Logique pour retourner sur la dernière photo lorsque l'on est à la 1ère photo et que l'on appuis sur précédent
   const imagePrecedente = () => {
     changerimage (imageActuelle === 0 ? nombreImage -1 : imageActuelle - 1)
   }

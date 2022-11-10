@@ -49,13 +49,13 @@
     transform: scale(0.95);
   }
   
-  .slide.active {
+.slide.active {
     height: 100%;
     width: 100%;
     opacity: 1;
     transition-duration: 1s;
     transform: scale(1);
-  }
+}
 
 @media screen and (max-width: 600px){
     .Carrousel {
