@@ -7,16 +7,14 @@ import Footer from "./Footer/index";
 import Error from "../pages/Error";
 
 function Router () {
-const rootUrl = "/P7-Kasa"
-
     return (
     <BrowserRouter>
     <Header />
     <Routes>
-      <Route path= {rootUrl+"/" } element={<Home />} />
-      <Route path={rootUrl+"/Logement/:id" } element={<Logement />} />
-      <Route path={rootUrl+"/A-Propos" }  element={<Apropos />} />
-      <Route path={rootUrl+"/*" }  element={<Error />} />
+      <Route path="/P7-Kasa/" element={<Home />} />
+      <Route path="/P7-Kasa/Logement/:id" element={<Logement />} />
+      <Route path="/P7-Kasa/A-Propos" element={<Apropos />} />
+      <Route path="*" element={<Error />} />
       
     </Routes>
     <Footer />
