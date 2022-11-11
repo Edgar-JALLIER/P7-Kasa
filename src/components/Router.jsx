@@ -11,9 +11,9 @@ function Router () {
     <BrowserRouter>
     <Header />
     <Routes>
-      <Route path="/P7-Kasa/" element={<Home />} />
-      <Route path="/P7-Kasa/Logement/:id" element={<Logement />} />
-      <Route path="/P7-Kasa/A-Propos" element={<Apropos />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/Logement/:id" element={<Logement />} />
+      <Route path="/A-Propos" element={<Apropos />} />
       <Route path="*" element={<Error />} />
       
     </Routes>
